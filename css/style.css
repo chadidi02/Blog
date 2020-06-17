@@ -70,6 +70,7 @@ body {
 }
 .icons {
 	width: 24px;
+	cursor: pointer;
 }
 
 /* menu */
@@ -77,10 +78,10 @@ body {
 	height: 0%;
 	width: 100%;
 	position: fixed;
-	z-index: 1;
+	z-index: 9;
 	top: 0;
-	left: 0;
-	overflow-y: hidden;
+	right: 0;
+	overflow-x: hidden;
 	transition: 0.5s;
 	background: linear-gradient(
 			180deg,
@@ -93,6 +94,7 @@ body {
 	background-size: cover;
 	width: 100%;
 	height: 100vh;
+	text-align: center;
 }
 
 .overlay-content {
@@ -138,4 +140,31 @@ body {
 		top: 15px;
 		right: 35px;
 	}
+}
+/* home */
+.banner {
+	position: relative;
+	width: 40%;
+	padding: 20px;
+}
+
+.banner .title h2 {
+	font-size: 35px;
+	color: #ffffff;
+}
+.banner .bio p {
+	color: #ffffff;
+	padding: 10px;
+	margin-bottom: 35px;
+}
+.btn {
+	background: #32e0c4;
+	display: inline-block;
+	padding: 10px 25px 10px 25px;
+	border-radius: 5px;
+}
+.gitS {
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 18px;
 }
