@@ -1,10 +1,16 @@
-body {
+* {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
+}
+body {
 	font-family: "Dosis", sans-serif;
+	background: #0a0a0a;
+	color: #eee;
 }
+
 .home {
+	width: 100%;
+	height: 100vh;
 	background: linear-gradient(
 			180deg,
 			rgba(0, 0, 0, 0) 0%,
@@ -12,159 +18,118 @@ body {
 			rgba(0, 0, 0, 0.83) 70.83%,
 			#0a0a0a 98.29%
 		),
-		url(../img/1.jpg);
+		url(/img/1.jpg);
 	background-size: cover;
-	width: 100%;
-	height: 100vh;
-}
-
-/* header */
-.header {
-	width: 100%;
-	padding: 10px 0 10px 0;
-	z-index: 10;
 	position: relative;
 }
-
-.container {
-	margin-left: 50px;
-	margin-right: 50px;
-}
-
-.flex-container {
-	display: flex;
-	align-items: stretch;
-	align-items: center;
-}
-
-.flex-container .dev {
+.header .logo,
+.header.hamburger-menu {
+	/* background: crimson; */
 	width: 100%;
+	position: fixed;
 }
-.header .logo img {
-	position: relative;
-	z-index: 10;
-}
-
 .logo img {
+	width: 120px;
+	margin-left: 50px;
+}
+
+.navbar {
+	width: 300px;
+	height: 100%;
+	background-color: #0a0a0a;
 	position: fixed;
-	width: 130px;
-}
-
-.menus .items {
-	display: inline-block;
-	margin-left: 5px;
-	float: right;
-}
-.open {
-	color: #32e0c4;
-	font-size: 10px;
-	line-height: 25px;
-	letter-spacing: 0.3em;
-}
-
-.link {
-	text-decoration: none;
-}
-.items {
-	list-style: none;
-}
-.icons {
-	width: 24px;
-	cursor: pointer;
-}
-
-/* menu */
-.overlay {
-	height: 0%;
-	width: 100%;
-	position: fixed;
-	z-index: 9;
 	top: 0;
+	right: -300px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	border-radius: 20% 0 0 60%;
+	transition: right 0.8s cubic-bezier(0.88, 0.14, 0.29, 0.36);
+}
+.change {
 	right: 0;
-	overflow-x: hidden;
-	transition: 0.5s;
-	background: linear-gradient(
-			180deg,
-			rgba(0, 0, 0, 0) 0%,
-			rgba(105, 139, 129, 0.218268) 0.01%,
-			rgba(0, 0, 0, 0.83) 70.83%,
-			#0a0a0a 98.29%
-		),
-		url(../img/1.jpg);
-	background-size: cover;
-	width: 100%;
-	height: 100vh;
-	text-align: center;
+}
+.hamburger-menu {
+	width: 30px;
+	height: 30px;
+	position: fixed;
+	top: 50px;
+	right: 50px;
+	cursor: pointer;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 }
 
-.overlay-content {
-	position: relative;
-	top: 25%;
-	width: 100%;
-	text-align: center;
-	margin-top: 30px;
-}
-
-.overlay a {
-	padding: 8px;
-	text-decoration: none;
-	font-size: 36px;
-	color: #818181;
-	display: block;
-	transition: 0.3s;
-}
-
-.overlay a:hover,
-.overlay a:focus {
-	color: #f1f1f1;
-}
-
-.overlay .closebtn {
-	position: absolute;
-	top: 20px;
-	right: 45px;
-	font-size: 60px;
-}
-
-@media screen and (max-height: 450px) {
-	.overlay {
-		overflow-y: auto;
-	}
-
-	.overlay a {
-		font-size: 20px;
-	}
-
-	.overlay .closebtn {
-		font-size: 40px;
-		top: 15px;
-		right: 35px;
-	}
-}
-/* home */
-.banner {
-	position: relative;
-	width: 40%;
-	padding: 20px;
-}
-
-.banner .title h2 {
-	font-size: 35px;
-	color: #ffffff;
-}
-.banner .bio p {
-	color: #ffffff;
-	padding: 10px;
-	margin-bottom: 35px;
-}
-.btn {
+.hamburger-menu:hover .line {
 	background: #32e0c4;
-	display: inline-block;
-	padding: 10px 25px 10px 25px;
-	border-radius: 5px;
 }
-.gitS {
-	color: #ffffff;
+/* Line */
+.line {
+	width: 100%;
+	height: 2px;
+	background-color: #eeeeee;
+	transition: all 0.8s;
+}
+
+.change .line-1 {
+	transform: rotateZ(-45deg) translate(-8px, 6px);
+}
+.change .line-2 {
+	opacity: 0;
+}
+.change .line-3 {
+	transform: rotateZ(45deg) translate(-8px, -6px);
+}
+
+/*  ./Line */
+
+.nav-list {
+	text-align: center;
+}
+
+.nav-item {
+	list-style: none;
+	margin: 25px;
+}
+
+.nav-link {
 	text-decoration: none;
-	font-size: 18px;
+	font-size: 22px;
+	color: #eee;
+	font-weight: 300;
+	letter-spacing: 1px;
+	position: relative;
+	padding: 3px 0;
+	text-transform: uppercase;
+}
+
+.nav-link::before,
+.nav-link::after {
+	content: "";
+	width: 100%;
+	height: 2px;
+	background-color: chocolate;
+	position: absolute;
+	left: 0;
+	transform: scaleX(0);
+	transition: transform 0.5s;
+}
+
+.nav-link::before {
+	top: 0;
+	transform-origin: right;
+}
+
+.nav-link::after {
+	bottom: 0;
+	transform-origin: left;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+	transform: scaleX(1);
 }

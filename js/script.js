@@ -1,7 +1,6 @@
-function openNav() {
-	document.getElementById("myNav").style.width = "30%";
-}
+const menuIcon = document.querySelector(".hamburger-menu");
+const navbar = document.querySelector(".navbar");
 
-function closeNav() {
-	document.getElementById("myNav").style.width = "0%";
-}
+menuIcon.addEventListener("click", () => {
+	navbar.classList.toggle("change");
+});
