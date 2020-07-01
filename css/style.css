@@ -1,6 +1,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 body {
 	font-family: "Dosis", sans-serif;
@@ -27,6 +28,7 @@ body {
 .header {
 	position: -webkit-sticky;
 	position: sticky;
+	z-index: 999;
 	/* sticky or fixed are fine */
 	position: fixed;
 	top: 0;
@@ -142,3 +144,20 @@ body {
 .nav-link:hover::after {
 	transform: scaleX(1);
 }
+
+/* title */
+.title{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 700px;
+}
+
+.title h2 {
+	font-size: 100px;
+	color: #eee;
+	font-weight: 400;
+	text-align: center;
+}
+/* ./title */
