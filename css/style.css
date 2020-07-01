@@ -12,14 +12,7 @@ body {
 .home {
 	width: 100%;
 	height: 100vh;
-	background: linear-gradient(
-			180deg,
-			rgba(0, 0, 0, 0) 0%,
-			rgba(105, 139, 129, 0.218268) 0.01%,
-			rgba(0, 0, 0, 0.83) 70.83%,
-			#0a0a0a 98.29%
-		),
-		url(/img/1.jpg);
+	background: url(/img/A1.jpg);
 	background-size: cover;
 	position: relative;
 }
@@ -33,11 +26,11 @@ body {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	transition: background .5s; /* control how smooth the background changes */
-  }
-  .header.scrolled {
+	transition: background 0.5s; /* control how smooth the background changes */
+}
+.header.scrolled {
 	background: #0a0a0a9c;
-  }
+}
 
 .logo img {
 	width: 120px;
@@ -76,13 +69,13 @@ body {
 }
 
 .hamburger-menu:hover .line {
-	background: #32e0c4;
+	background: #5e2ced;
 }
 /* Line */
 .line {
 	width: 100%;
 	height: 2px;
-	background-color: #eeeeee;
+	background: #00c99c;
 	transition: all 0.8s;
 }
 
@@ -123,7 +116,7 @@ body {
 	content: "";
 	width: 100%;
 	height: 2px;
-	background-color: chocolate;
+	background-color: #00c99c;
 	position: absolute;
 	left: 0;
 	transform: scaleX(0);
@@ -146,7 +139,8 @@ body {
 }
 
 /* title */
-.title{
+.banner_top {
+	text-align: center;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -154,10 +148,63 @@ body {
 	width: 700px;
 }
 
-.title h2 {
+.title {
 	font-size: 100px;
-	color: #eee;
+	color: #ffffff;
 	font-weight: 400;
 	text-align: center;
+	margin-bottom: 45px;
 }
-/* ./title */
+.banner_content p {
+	font-size: 18px;
+	line-height: 30px;
+	color: #6a7695;
+	margin-bottom: 53px;
+}
+.seo_btn_two {
+	color: #00c99c;
+	background: #d4f6ee;
+}
+.seo_btn_one {
+	color: #5e2ced;
+	background: #e8e1fc;
+}
+.banner_content .seo_btn {
+	margin: 0 8px;
+}
+.seo_btn {
+	padding: 11px 40px;
+	border-radius: 4px;
+	text-decoration: none;
+}
+.btn_six,
+.gr_btn,
+.seo_btn {
+	display: inline-block;
+}
+.btn_hover {
+	overflow: hidden;
+	display: inline-block;
+	font-weight: 500;
+	font-size: 14px;
+	font-family: "Poppins", sans-serif;
+	z-index: 1;
+	cursor: pointer;
+	-webkit-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+}
+.seo_btn_two:hover {
+	background: #00c99c;
+	color: #fff;
+}
+.seo_btn_one:hover {
+	background: #5e2ced;
+	color: #fff;
+}
+.btn_hover:hover {
+	color: #fff;
+}
+a{
+	text-decoration: none;
+}
