@@ -3,16 +3,44 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
+:root {
+    --blue-900: #e6f6ff;
+    --blue-800: #b3e5ff;
+    --blue-700: #80d4ff;
+    --blue-600: #33b9ff;
+    --blue-400: #0086cc;
+    --blue-300: #006599;
+    --blue-200: #004366;
+    --blue-100: #023;
+    --green-900: #f0fff4;
+    --green-800: #c6f6d5;
+    --green-700: #9ae6b4;
+    --green-600: #68d391;
+    --green-400: #38a169;
+    --green-300: #2f855a;
+    --green-200: #276749;
+    --green-100: #22543d;
+    --gray-900: #f7fafc;
+    --gray-800: #edf2f7;
+    --gray-700: #e2e8f0;
+    --gray-600: #cbd5e0;
+    --gray-400: #718096;
+    --gray-300: #4a5568;
+    --gray-200: #2d3748;
+    --gray-100: #1a202c;
+    --white: #10141d;
+    --black: #fff;
+    --shadow-default-color: rgba(0,0,0,0.75);
+}
 body {
 	font-family: "Dosis", sans-serif;
-	/* background: #0a0a0a; */
-	/* color: #eee; */
+	background: var(--gray-200);
 }
-
 .home {
 	width: 100%;
 	height: 100vh;
-	background: url(/img/A1.jpg);
+	background: url(/img/1.jpg);
 	background-size: cover;
 	position: relative;
 }
